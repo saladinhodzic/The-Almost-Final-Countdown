@@ -14,7 +14,7 @@ function App() {
     setValues((prev) => {
       return {
         ...prev,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   };
