@@ -15,7 +15,7 @@ export default function TimerChallenge({ title, targetTime }) {
   };
 
   const handleStop = () => {
-    clearInterval(timer.current);
+    clearTimeout(timer.current);
   };
   return (
     <>
