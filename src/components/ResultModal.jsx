@@ -14,10 +14,12 @@ const ResultModal = forwardRef(function ResultModal(
 
   const resultLost = timeRemaining <= 0;
   const timeLeft = (timeRemaining / 1000).toFixed(2);
+  const score = Math.round((1 - timeRemaining / (targetTime * 1000)) * 100);
 
   return (
     <dialog ref={dialog} className="result-modal">
       {resultLost && <h2>You lost.</h2>}
+      {!resultLost && <h2>Your score: {score}</h2>}
       <p>
         Target time was<strong>{targetTime} seconds.</strong>
       </p>
